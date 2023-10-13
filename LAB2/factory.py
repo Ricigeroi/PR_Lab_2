@@ -1,18 +1,22 @@
 from player import Player
-
+from datetime import datetime
+import json
 
 class PlayerFactory:
     def to_json(self, players):
         '''
             This function should transform a list of Player objects into a list with dictionaries.
         '''
-        pass
+        return [{
+            **player.__dict__,
+            'date_of_birth': player.date_of_birth.strftime('%Y-%m-%d')
+        } for player in players]
 
     def from_json(self, list_of_dict):
         '''
             This function should transform a list of dictionaries into a list with Player objects.
         '''
-        pass
+        return json.dumps(list_of_dict)
 
     def from_xml(self, xml_string):
         '''
@@ -34,7 +38,7 @@ class PlayerFactory:
 
     def to_protobuf(self, list_of_players):
         '''
-            This function should transform a list with Player objects intoa binary protobuf string.
+            This function should transform a list with Player objects into a binary protobuf string.
         '''
         pass
 
