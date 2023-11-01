@@ -15,7 +15,7 @@ class TestToJSON(unittest.TestCase):
                 "email" : "alpha@gmail.com",
                 "date_of_birth" : "2000-04-04",
                 "xp" : 455,
-                "cls" : "Berserk"
+                "class" : "Berserk"
             }
         ]
 
@@ -35,14 +35,14 @@ class TestToJSON(unittest.TestCase):
                 "email": "alpha@gmail.com",
                 "date_of_birth": "2000-04-04",
                 "xp": 455,
-                "cls": "Berserk"
+                "class": "Berserk"
             },
             {
                 "nickname" : "Beta",
                 "email" : "beta@gmail.com",
                 "date_of_birth" : "2001-06-10",
                 "xp" : 657,
-                "cls" : "Tank"
+                "class" : "Tank"
             }
         ]
 
@@ -61,7 +61,7 @@ class TestFromJSON(unittest.TestCase):
                 "email" : "alpha@gmail.com",
                 "date_of_birth" : "2000-04-04",
                 "xp" : 455,
-                "cls" : "Berserk"
+                "class" : "Berserk"
             }
         ]
 
@@ -86,14 +86,14 @@ class TestFromJSON(unittest.TestCase):
                 "email": "alpha@gmail.com",
                 "date_of_birth": "2000-04-04",
                 "xp": 455,
-                "cls": "Berserk"
+                "class": "Berserk"
             },
             {
                 "nickname": "Beta",
                 "email": "beta@gmail.com",
                 "date_of_birth": "2001-06-10",
                 "xp": 657,
-                "cls": "Tank"
+                "class": "Tank"
             }
         ]
 
@@ -114,7 +114,7 @@ class TestToXML(unittest.TestCase):
                     <email>alpha@gmail.com</email>
                     <date_of_birth>2000-04-04</date_of_birth>
                     <xp>455</xp>
-                    <cls>Berserk</cls>
+                    <class>Berserk</class>
                 </player>
             </data>
         '''
@@ -134,14 +134,14 @@ class TestToXML(unittest.TestCase):
                     <email>alpha@gmail.com</email>
                     <date_of_birth>2000-04-04</date_of_birth>
                     <xp>455</xp>
-                    <cls>Berserk</cls>
+                    <class>Berserk</class>
                 </player>
                 <player>
                     <nickname>Beta</nickname>
                     <email>beta@gmail.com</email>
                     <date_of_birth>2001-06-10</date_of_birth>
                     <xp>657</xp>
-                    <cls>Tank</cls>
+                    <class>Tank</class>
                 </player>
             </data>
         '''
@@ -168,7 +168,7 @@ class TestFromXML(unittest.TestCase):
                             <email>alpha@gmail.com</email>
                             <date_of_birth>2000-04-04</date_of_birth>
                             <xp>455</xp>
-                            <cls>Berserk</cls>
+                            <class>Berserk</class>
                         </player>
                     </data>
                 '''
@@ -192,14 +192,14 @@ class TestFromXML(unittest.TestCase):
                             <email>alpha@gmail.com</email>
                             <date_of_birth>2000-04-04</date_of_birth>
                             <xp>455</xp>
-                            <cls>Berserk</cls>
+                            <class>Berserk</class>
                         </player>
                         <player>
                             <nickname>Beta</nickname>
                             <email>beta@gmail.com</email>
                             <date_of_birth>2001-06-10</date_of_birth>
                             <xp>657</xp>
-                            <cls>Tank</cls>
+                            <class>Tank</class>
                         </player>
                     </data>
                 '''

@@ -10,15 +10,18 @@ class PlayerFactory:
             This function should transform a list of Player objects into a list with dictionaries.
         """
         return [{
-            **player.__dict__,
-            'date_of_birth': player.date_of_birth.strftime('%Y-%m-%d')
+            'nickname': player.nickname,
+            'email': player.email,
+            'date_of_birth': player.date_of_birth.strftime('%Y-%m-%d'),
+            'xp': player.xp,
+            'class': player.cls
         } for player in players]
 
     def from_json(self, list_of_dict):
         """
             This function should transform a list of dictionaries into a list with Player objects.
         """
-        return [Player(item['nickname'], item['email'], item['date_of_birth'], item['xp'], item['cls'])
+        return [Player(item['nickname'], item['email'], item['date_of_birth'], item['xp'], item['class'])
                 for item in list_of_dict]
 
     def from_xml(self, xml_string):
@@ -35,7 +38,7 @@ class PlayerFactory:
                     item.find("email").text,
                     item.find("date_of_birth").text,
                     int(item.find("xp").text),
-                    item.find("cls").text
+                    item.find("class").text
                 )
             )
 
@@ -62,7 +65,7 @@ class PlayerFactory:
             xp = ET.SubElement(root, "xp")
             xp.text = str(player.xp)
 
-            cls = ET.SubElement(root, "cls")
+            cls = ET.SubElement(root, "class")
             cls.text = player.cls
 
             xml_doc = ET.tostring(root).decode()
